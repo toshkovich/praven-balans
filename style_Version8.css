@@ -1,0 +1,235 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8fafd;
+  color: #23313c;
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero-overlay {
+  background: rgba(0, 42, 85, 0.65);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 20px;
+}
+.main-nav {
+  margin: 18px 0 8px 0;
+}
+.main-nav a {
+  color: #f9d923;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.main-nav a:hover {
+  color: #fff;
+}
+.hero .btn {
+  margin-top: 20px;
+  padding: 12px 32px;
+  background: #f9d923;
+  color: #002a55;
+  border: none;
+  border-radius: 24px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.hero .btn:hover {
+  background: #fbbf24;
+}
+
+.section-bg {
+  background: linear-gradient(90deg, #e5f3fd 0%, #f9f9f9 100%);
+  padding: 50px 0 30px 0;
+  margin-bottom: 0;
+}
+.section-img {
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0 30px 0;
+  color: #fff;
+  position: relative;
+}
+.section-img::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 42, 85, 0.85);
+  z-index: 1;
+}
+.section-img > * {
+  position: relative;
+  z-index: 2;
+}
+
+h2 { text-align: center; margin-bottom: 30px; }
+.team-cards, .services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.card, .service-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30, 42, 75, 0.08);
+  padding: 28px 22px;
+  min-width: 220px;
+  max-width: 300px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  position: relative;
+}
+.card:hover, .service-card:hover, .office-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(30, 42, 75, 0.16);
+}
+.service-card i {
+  font-size: 2.2rem;
+  color: #f9d923;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.animate.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.offices-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 24px;
+}
+.office-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(30, 42, 75, 0.10);
+  padding: 24px 20px;
+  min-width: 300px;
+  max-width: 400px;
+  flex: 1 1 320px;
+  text-align: left;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.office-card h3 {
+  color: #002a55;
+  margin-top: 0;
+}
+.gmap {
+  margin-top: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.btn-map {
+  display: inline-block;
+  margin-top: 14px;
+  background: #f9d923;
+  color: #002a55;
+  border: none;
+  border-radius: 22px;
+  padding: 8px 22px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-map:hover {
+  background: #fbbf24;
+  color: #002a55;
+}
+
+.contact-form {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: rgba(255,255,255,0.12);
+  padding: 28px 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.contact-form input, .contact-form textarea {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  color: #23313c;
+  background: #f8fafd;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  outline: none;
+}
+.contact-form button {
+  background: #f9d923;
+  color: #002a55;
+  border: none;
+  border-radius: 22px;
+  padding: 10px 24px;
+  font-weight: bold;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button:hover {
+  background: #fbbf24;
+}
+
+.quotes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.quotes blockquote {
+  font-style: italic;
+  background: #e4edfa;
+  padding: 18px 20px;
+  border-radius: 12px;
+  color: #002a55;
+  max-width: 450px;
+  box-shadow: 0 2px 8px rgba(0,42,85,0.04);
+}
+
+footer {
+  background: #002a55;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0 10px 0;
+  margin-top: 0;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 900px) {
+  .team-cards, .services-list, .offices-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card, .service-card, .office-card {
+    max-width: 98vw;
+  }
+}
